@@ -9,12 +9,16 @@
 <script>
     function change()
     {
-        var change = document.querySelector(`body`);
-        change.style.backgroundImage = "url('image.jpeg')"
+        var change = document.createElement('p');
+        var t = document.createTextNode('Hello bro');
+        change.appendChild(t);
+        var parent=document.querySelector('.main');
+        parent.appendChild(change);
+
     }
 </script>
-<body>
-    <button class="link" onclick="change()">Change image</button>
+<body class="main">
+    <button class="link" onclick="change()">Create Button 😏</button>
     
 </body>
 </html>
